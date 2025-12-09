@@ -9,7 +9,7 @@ spec:
   selector:
     app: nodeapp
   ports:
-    - port: 3000       # Service port
-      targetPort: 3000  # Container port 
+    - port: 3000       
+      targetPort: 3000  
       protocol: TCP
       nodePort: 31000
