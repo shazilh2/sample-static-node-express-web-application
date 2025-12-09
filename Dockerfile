@@ -2,7 +2,7 @@
 FROM node:20-alpine
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /
 
 # Copy package.json and package-lock.json (if available) to the working directory
 # This allows npm install to leverage Docker's layer caching
