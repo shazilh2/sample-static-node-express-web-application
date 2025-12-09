@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nodejs
-        image: shazilhameed/nodeapp:v1
+        image: nodeapp:v1
         ports:
         - containerPort: 3000
