@@ -1,7 +1,7 @@
 # Makefile for simple-nodejs-app_Lab_Exam
 
 APP_NAME := simple-nodejs-app
-IMAGE_NAME := apoorvad4/$(APP_NAME)
+IMAGE_NAME := shazilhameed/$(APP_NAME)
 PORT := 3000
 
 .DEFAULT_GOAL := help
