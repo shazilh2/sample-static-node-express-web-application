@@ -9,7 +9,7 @@ spec:
   selector:
     app: nodeapp
   ports:
-    - port: 3050       # Service port
-      targetPort: 3050  # Container port (Tomcat)
+    - port: 3000       # Service port
+      targetPort: 3000  # Container port 
       protocol: TCP
       nodePort: 31000
