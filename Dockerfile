@@ -1,20 +1,21 @@
-# Base image
-FROM node:18-alpine
+# Use an official Node.js runtime as a parent image
+FROM node:20-alpine
 
-# Set working directory
-WORKDIR /usr/src/app
+# Set the working directory in the container
+WORKDIR /app
 
-# Copy package files
+# Copy package.json and package-lock.json (if available) to the working directory
+# This allows npm install to leverage Docker's layer caching
 COPY package*.json ./
 
-# Install dependencies
+# Install application dependencies
 RUN npm install
 
-# Copy application source
+# Copy the rest of the application code to the working directory
 COPY . .
 
-# Expose application port
+# Expose the port your Node.js app listens on
 EXPOSE 3000
 
-# Start the app
-CMD ["npm", "start"]
+# Define the command to run your application
+CMD [ "node", "index.js" ]
